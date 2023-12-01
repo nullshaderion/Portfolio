@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diablo's Unique Portfolio</title>
+    <title>Diablo's Cool Portfolio</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', sans-serif;
+            font-family: 'Verdana', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
@@ -15,15 +15,15 @@
             background-position: center;
             background-repeat: no-repeat;
             height: 100vh;
-            color: #fff;
+            color: #ecf0f1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+            animation: fadeIn 1.5s ease-out;
         }
         header {
-            background-color: #8e44ad;
+            background-color: #3498db;
             padding: 30px;
             color: #fff;
             width: 100%;
@@ -39,9 +39,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            opacity: 0; /* Hidden by default */
-            animation: fadeIn 1.5s ease-out; /* Fade-in animation */
-            animation-delay: 1s; /* Delay to start after the initial fade-in */
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out;
+            animation-delay: 1s;
         }
         p {
             font-size: 1.5em;
@@ -82,37 +82,50 @@
             animation: fadeIn 1.5s ease-out;
             animation-delay: 1s;
             margin: 50px 0;
+            color: #ecf0f1;
+        }
+        h2 {
+            color: #e74c3c;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .about-me {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: left;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Diablo's Unique Portfolio</h1>
+        <h1>Diablo's Cool Portfolio</h1>
     </header>
 
     <main>
-        <p>Welcome to my incredibly unique and cool portfolio! I'm here to showcase my awesome skills and creativity.</p>
+        <p>Welcome to my incredibly cool and unique portfolio! I'm here to showcase my awesome skills and creativity.</p>
 
         <button onclick="redirectToCustomURL()">Explore Now</button>
     </main>
 
     <footer>
-        <p>&copy; 2023 Diablo's Unique Portfolio. All rights reserved.</p>
+        <p>&copy; 2023 Diablo's Cool Portfolio. All rights reserved.</p>
     </footer>
 
     <!-- Additional section revealed on scroll -->
     <div class="scroll-content">
         <h2>About Me</h2>
-        <p>
-            <strong>Gamer</strong><br>
-            <em>Beginner Discord bot programmer</em><br>
-            Lua and Python enthusiast<br>
-            Cybersecurity (OSINT and HUMINT)<br>
-            After Effects editor<br>
-            ENTP, Strategist<br>
-            Ex AOS Engineer
-        </p>
+        <div class="about-me">
+            <p>
+                <strong>Gamer</strong><br>
+                <em>Beginner Discord bot programmer</em><br>
+                Lua and Python enthusiast<br>
+                Cybersecurity (OSINT and HUMINT)<br>
+                After Effects editor<br>
+                ENTP, Strategist<br>
+                Ex AOS Engineer
+            </p>
+        </div>
     </div>
 
     <script>
