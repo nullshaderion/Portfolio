@@ -10,7 +10,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            background-image: url('yooo wtf.jpg'); /* Replace with the direct URL to your image on GitHub */
+            background-image: url('yooo wtf.jpg'); /* Replace with the URL to your first background image */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -138,6 +138,11 @@
                 scrollContent.style.opacity = 1;
             }
         }
+
+        // Change background after 5 seconds
+        setTimeout(function () {
+            document.body.style.backgroundImage = "url('wildin.jpg')";
+        }, 5000);
     </script>
 
 </body>
