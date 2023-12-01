@@ -72,6 +72,9 @@
             }
         }
         .scroll-content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
             opacity: 0;
             animation: fadeIn 1.5s ease-out forwards;
             margin: 50px 0;
@@ -86,6 +89,9 @@
             font-size: 1.2em;
             line-height: 1.6;
             text-align: left;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -100,14 +106,10 @@
         <button onclick="redirectToCustomURL()">Explore Now</button>
     </main>
 
-    <footer>
-        <p>&copy; 2023 Diablo's Awesome Portfolio. All rights reserved.</p>
-    </footer>
-
     <!-- Additional section revealed on scroll -->
     <div class="scroll-content">
-        <h2>About Me</h2>
         <div class="about-me">
+            <h2>About Me</h2>
             <p>
                 <strong>Gamer</strong><br>
                 <em>Beginner Discord bot programmer</em><br>
@@ -138,11 +140,6 @@
                 scrollContent.style.opacity = 1;
             }
         }
-
-        // Change background after 5 seconds
-        setTimeout(function () {
-            document.body.style.backgroundImage = "url('wildin.jpg')";
-        }, 5000);
     </script>
 
 </body>
