@@ -22,6 +22,7 @@
             align-items: center;
             opacity: 0;
             animation: fadeIn 1.5s ease-out forwards;
+            transition: background-image 1s ease; /* Transition for the background image */
         }
         header {
             background-color: #3498db;
@@ -79,6 +80,7 @@
             animation: fadeIn 1.5s ease-out forwards;
             margin: 50px 0;
             color: #ecf0f1;
+            transition: transform 1s ease; /* Transition for the scroll content */
         }
         h2 {
             color: #e74c3c;
@@ -122,6 +124,10 @@
         </div>
     </div>
 
+    <footer>
+        <!-- Removed copyright text -->
+    </footer>
+
     <script>
         function redirectToCustomURL() {
             window.location.href = 'https://maper.info/info-Uzdlaith2';
@@ -138,6 +144,8 @@
 
             if (scrollPosition > 200) {
                 scrollContent.style.opacity = 1;
+                scrollContent.style.transform = 'translateX(-50%)'; /* Move to the side */
+                document.body.style.backgroundImage = "url('wildin.jpg')"; /* Replace with the URL to your second background image */
             }
         }
     </script>
