@@ -94,7 +94,18 @@
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
-            transform: translateX(50%); /* Moved to the other side */
+            transform: translateX(150%); /* Moved completely to the side */
+            transition: transform 1s ease;
+        }
+        .branch-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            color: #ecf0f1;
+            opacity: 0;
+            transition: opacity 1s ease, transform 1s ease;
         }
     </style>
 </head>
@@ -125,6 +136,8 @@
         </div>
     </div>
 
+    <div class="branch-text">Eagle</div>
+
     <footer>
         <!-- Removed copyright text -->
     </footer>
@@ -141,16 +154,20 @@
 
         function revealOnScroll() {
             var scrollContent = document.querySelector('.scroll-content');
+            var aboutMe = document.querySelector('.about-me');
+            var branchText = document.querySelector('.branch-text');
             var scrollPosition = window.scrollY;
 
             if (scrollPosition > 500) {
                 scrollContent.style.opacity = 1;
                 scrollContent.style.transform = 'translateX(-80%)'; /* Move even further to the other side */
-                document.body.style.backgroundImage = "url('wilding.jpg')";
+                aboutMe.style.transform = 'translateX(-150%)'; /* Move completely to the side */
+                branchText.style.opacity = 1;
             } else {
                 scrollContent.style.opacity = 0;
                 scrollContent.style.transform = 'translateX(0)';
-                document.body.style.backgroundImage = "url('yooo wtf.jpg')";
+                aboutMe.style.transform = 'translateX(0)';
+                branchText.style.opacity = 0;
             }
         }
     </script>
