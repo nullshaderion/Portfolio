@@ -14,7 +14,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 100vh;
+            height: 200vh; /* Increased height for scrolling */
             color: #ecf0f1;
             display: flex;
             flex-direction: column;
@@ -22,7 +22,7 @@
             align-items: center;
             opacity: 0;
             animation: fadeIn 1.5s ease-out forwards;
-            transition: background-image 1s ease; /* Transition for the background image */
+            transition: background-image 1s ease;
         }
         header {
             background-color: #3498db;
@@ -80,7 +80,7 @@
             animation: fadeIn 1.5s ease-out forwards;
             margin: 50px 0;
             color: #ecf0f1;
-            transition: transform 1s ease; /* Transition for the scroll content */
+            transition: transform 1s ease;
         }
         h2 {
             color: #e74c3c;
@@ -142,10 +142,10 @@
             var scrollContent = document.querySelector('.scroll-content');
             var scrollPosition = window.scrollY;
 
-            if (scrollPosition > 200) {
+            if (scrollPosition > 500) {
                 scrollContent.style.opacity = 1;
-                scrollContent.style.transform = 'translateX(-50%)'; /* Move to the side */
-                document.body.style.backgroundImage = "url('wildin.jpg')"; /* Replace with the URL to your second background image */
+                scrollContent.style.transform = 'translateX(-50%)';
+                document.body.style.backgroundImage = "url('wilding.jpg')";
             }
         }
     </script>
