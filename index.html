@@ -20,7 +20,8 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            animation: fadeIn 1.5s ease-out;
+            opacity: 0; /* Hidden by default */
+            animation: fadeIn 1.5s ease-out forwards; /* Keep the final state after animation */
         }
         header {
             background-color: #3498db;
@@ -39,9 +40,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            opacity: 0;
-            animation: fadeIn 1.5s ease-out;
-            animation-delay: 1s;
         }
         p {
             font-size: 1.5em;
@@ -69,9 +67,6 @@
             width: 100%;
         }
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
             to {
                 opacity: 1;
             }
@@ -79,8 +74,7 @@
         /* Additional styles for the scrolling content */
         .scroll-content {
             opacity: 0;
-            animation: fadeIn 1.5s ease-out;
-            animation-delay: 1s;
+            animation: fadeIn 1.5s ease-out forwards; /* Keep the final state after animation */
             margin: 50px 0;
             color: #ecf0f1;
         }
@@ -103,13 +97,13 @@
     </header>
 
     <main>
-        <p>Welcome to the portfolio</p>
+        <p>Welcome to my incredibly cool and unique portfolio! I'm here to showcase my awesome skills and creativity.</p>
 
         <button onclick="redirectToCustomURL()">Explore Now</button>
     </main>
 
     <footer>
-        <p>&copy; 2023 Diablo's Portfolio. All rights reserved.</p>
+        <p>&copy; 2023 Diablo's Cool Portfolio. All rights reserved.</p>
     </footer>
 
     <!-- Additional section revealed on scroll -->
