@@ -20,8 +20,8 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            opacity: 0; /* Hidden by default */
-            animation: fadeIn 1.5s ease-out forwards; /* Keep the final state after animation */
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
         }
         header {
             background-color: #3498db;
@@ -74,7 +74,7 @@
         /* Additional styles for the scrolling content */
         .scroll-content {
             opacity: 0;
-            animation: fadeIn 1.5s ease-out forwards; /* Keep the final state after animation */
+            animation: fadeIn 1.5s ease-out forwards;
             margin: 50px 0;
             color: #ecf0f1;
         }
@@ -87,6 +87,19 @@
             font-size: 1.2em;
             line-height: 1.6;
             text-align: left;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .entp {
+            font-style: italic;
+            font-weight: bold;
+        }
+        .cyber-sec {
+            font-weight: bold;
+            font-style: italic;
+            color: #3498db;
         }
     </style>
 </head>
@@ -116,10 +129,17 @@
                 Lua and Python enthusiast<br>
                 Cybersecurity (OSINT and HUMINT)<br>
                 After Effects editor<br>
-                ENTP, Strategist<br>
+                <span class="entp">ENTP, Strategist</span><br>
                 Ex AOS Engineer
             </p>
         </div>
+
+        <!-- Additional image section -->
+        <img src="your-image-path.jpg" alt="Cool Image">
+
+        <!-- Additional Cyber Security information -->
+        <h2 class="cyber-sec">Cyber Security</h2>
+        <p class="cyber-sec">I am passionate about cybersecurity, with a focus on OSINT (Open Source Intelligence) and HUMINT (Human Intelligence). My goal is to make the digital world a safer place.</p>
     </div>
 
     <script>
