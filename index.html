@@ -94,7 +94,7 @@
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
-            transform: translateX(50%); /* Moved to the other side */
+            transform: translateX(-50%); /* Moved completely to the left */
         }
     </style>
 </head>
@@ -141,15 +141,18 @@
 
         function revealOnScroll() {
             var scrollContent = document.querySelector('.scroll-content');
+            var aboutMe = document.querySelector('.about-me');
             var scrollPosition = window.scrollY;
 
             if (scrollPosition > 500) {
                 scrollContent.style.opacity = 1;
                 scrollContent.style.transform = 'translateX(-80%)'; /* Move even further to the other side */
+                aboutMe.style.transform = 'translateX(-100%)'; /* Move completely to the left */
                 document.body.style.backgroundImage = "url('wilding2.jpg')";
             } else {
                 scrollContent.style.opacity = 0;
                 scrollContent.style.transform = 'translateX(0)';
+                aboutMe.style.transform = 'translateX(-50%)'; /* Moved completely to the left but still visible */
                 document.body.style.backgroundImage = "url('yooo wtf.jpg')";
             }
         }
