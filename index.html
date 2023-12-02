@@ -10,7 +10,7 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            background-image: url('yooo wtf.jpg'); /* Replace with the URL to your first background image */
+            background-image: url('your-first-image.jpg'); /* Replace with the URL to your first background image */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -22,7 +22,6 @@
             align-items: center;
             opacity: 0;
             animation: fadeIn 1.5s ease-out forwards;
-            transition: background-image 1s ease;
         }
         header {
             background-color: #3498db;
@@ -56,7 +55,7 @@
             color: #fff;
             border: none;
             border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s;
         }
         button:hover {
             background-color: #c0392b;
@@ -87,34 +86,12 @@
             margin-bottom: 20px;
         }
         .about-me {
-            position: relative;
             font-size: 1.2em;
             line-height: 1.6;
             text-align: left;
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
-        }
-        .icon {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 30px;
-            height: 30px;
-            background-color: #3498db;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-        }
-        .social-buttons {
-            display: none;
-            flex-direction: column;
-        }
-        .social-buttons.show {
-            display: flex;
         }
     </style>
 </head>
@@ -125,22 +102,13 @@
     </header>
 
     <main>
-        <p>Welcome to my portfolio, here are some things about me :3.</p>
-        <button id="exploreBtn" onclick="toggleSocialButtons()">Explore Now</button>
-        <div class="social-buttons">
-            <a href="https://maper.info/info-Uzdlaith2" target="_blank" rel="noopener noreferrer">
-                <button>Discord</button>
-            </a>
-            <a href="https://maper.info/info-Uzdlaith2" target="_blank" rel="noopener noreferrer">
-                <button>Roblox</button>
-            </a>
-        </div>
+        <p>Welcome to my incredibly cool and unique portfolio! I'm here to showcase my awesome skills and creativity.</p>
+        <button onclick="redirectToCustomURL()">Explore Now</button>
     </main>
 
     <!-- Additional section revealed on scroll -->
     <div class="scroll-content">
         <div class="about-me">
-            <div class="icon" onclick="changeBackground()">🌟</div>
             <h2>About Me</h2>
             <p>
                 <strong>Gamer</strong><br>
@@ -155,32 +123,22 @@
     </div>
 
     <script>
-        function toggleSocialButtons() {
-            var exploreBtn = document.getElementById('exploreBtn');
-            var socialButtons = document.querySelector('.social-buttons');
-            var buttonText = exploreBtn.innerText.trim();
-
-            if (buttonText === 'Explore Now') {
-                exploreBtn.innerText = 'Visit My Socials';
-                socialButtons.classList.add('show');
-            } else {
-                exploreBtn.innerText = 'Explore Now';
-                socialButtons.classList.remove('show');
-            }
-        }
-
         function redirectToCustomURL() {
             window.location.href = 'https://maper.info/info-Uzdlaith2';
         }
 
-        function changeBackground() {
-            var body = document.body;
-            var currentBackground = body.style.backgroundImage;
-            var newBackground = currentBackground.includes('yooo wtf.jpg')
-                ? "url('wilding2.jpg')"  // Replace with your second background image
-                : "url('yooo wtf.jpg')";  // Replace with your first background image
+        // Revealing the additional section on scroll
+        document.addEventListener('DOMContentLoaded', function () {
+            window.addEventListener('scroll', revealOnScroll);
+        });
 
-            body.style.backgroundImage = newBackground;
+        function revealOnScroll() {
+            var scrollContent = document.querySelector('.scroll-content');
+            var scrollPosition = window.scrollY;
+
+            if (scrollPosition > 200) {
+                scrollContent.style.opacity = 1;
+            }
         }
     </script>
 
