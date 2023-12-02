@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diablo's Portfolio</title>
+    <title>Diablo's Awesome Portfolio</title>
     <style>
         body {
             font-family: 'Verdana', sans-serif;
@@ -22,6 +22,7 @@
             align-items: center;
             opacity: 0;
             animation: fadeIn 1.5s ease-out forwards;
+            transition: background-image 1s ease;
         }
         header {
             background-color: #3498db;
@@ -86,12 +87,27 @@
             margin-bottom: 20px;
         }
         .about-me {
+            position: relative;
             font-size: 1.2em;
             line-height: 1.6;
             text-align: left;
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
+        }
+        .icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: #3498db;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
         }
     </style>
 </head>
@@ -109,6 +125,7 @@
     <!-- Additional section revealed on scroll -->
     <div class="scroll-content">
         <div class="about-me">
+            <div class="icon" onclick="changeBackground()">🌟</div>
             <h2>About Me</h2>
             <p>
                 <strong>Gamer</strong><br>
@@ -125,6 +142,10 @@
     <script>
         function redirectToCustomURL() {
             window.location.href = 'https://maper.info/info-Uzdlaith2';
+        }
+
+        function changeBackground() {
+            document.body.style.backgroundImage = "url('wilding2.jpg')";
         }
 
         // Revealing the additional section on scroll
